@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -57,3 +57,136 @@ html, body {
     height: 100%;
 }
 
+/* [ ] Variables: Incorporate variables in your project for color and font stacks.  
+* [ ] Nesting: Every selector should be nested inside the main container.  Avoid having global styles unless they are element level.
+* [ ] Mixins: Create 2 mixins of your choosing. Hint: It's super helpful to use flexbox properties in mixins
+* [ ] Mobile: Use nested-at rules to provide a mobile version of your resume.  Use `500px` as a `max-width` for mobile.*/
+/*code starts here*/
+@h1-font:2rem;
+@p-font:1rem;
+@h3-font:1.5rem;
+@grey: rgb(223, 223, 223);
+@green:rgb(57, 73, 57);
+@black:black;
+@white:white;
+@margin-top:15px;
+ 
+body{
+	margin: auto 400px;	
+    @media(max-width: 500px){
+	margin:auto auto;
+	}
+}
+.flex{
+	display: flex;
+}
+.block{
+	display: block;
+}
+
+.table-spacing{
+	padding: 8px 50px;
+	@media(max-width: 500px){
+		padding:8px 35px;
+	}
+}
+h1{
+	margin-top: @margin-top;
+	font-size:@h1-font;
+}
+h3{
+	margin-top: @margin-top;
+	font-size: @h3-font;
+}
+p{
+	
+	font-size: @p-font;
+}
+nav {
+	.flex();
+	justify-content: flex-end;
+
+	margin-top: 20px;
+	a{
+		text-decoration: none;
+		color:@black;
+		margin: auto 3px;
+	}
+}
+.introduction{
+	background: @grey;
+	padding-bottom: 30px;
+	margin-top:30px;
+	@media(max-width: 500px){
+		text-align: center;
+	}
+	p{
+		margin-left: 5px;
+	}
+	button{
+		background:@green;
+		color:@white;
+		margin:8px auto auto 5px;
+		padding: 10px;
+		@media(max-width: 500px){
+			margin:10 auto auto 120px;
+		}
+	}
+}
+.listen-up-section{
+	h3{
+		font-size: @h3-font;
+		margin-bottom: 2px;
+	}
+	.flex();
+	@media(max-width: 500px){
+		.block();
+		text-align: center;
+	}
+	.listen-up{
+		flex-basis: 50%;
+	}
+}
+
+.stuff-im-good-at{	
+	margin-left:20px;
+	flex-basis: 50%;
+	@media(max-width: 500px){
+		margin-left: 0;
+	}
+	p{
+		border: 1px solid @grey;
+		padding: 5px;
+	}
+}
+.work-history{
+	@media(max-width: 500px){
+		text-align: center;
+	}
+	table{
+		border-spacing: 5px;
+		border-collapse: collapse;
+	}
+	tr{
+		background-color: @grey;
+	}
+	tr:nth-of-type(2n){
+		background-color:@white;
+	}
+			td{
+				.table-spacing();
+			}	
+			
+}
+
+footer{
+	text-align: center;
+	background-color:@green;
+	color:@white;
+	border:1px solid black;
+	padding-bottom:50px;
+	margin-top:20px;
+	p{
+		margin-top:15px;
+	}
+}

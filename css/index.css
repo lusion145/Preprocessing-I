@@ -1,1 +1,271 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* [ ] Variables: Incorporate variables in your project for color and font stacks.  
+* [ ] Nesting: Every selector should be nested inside the main container.  Avoid having global styles unless they are element level.
+* [ ] Mixins: Create 2 mixins of your choosing. Hint: It's super helpful to use flexbox properties in mixins
+* [ ] Mobile: Use nested-at rules to provide a mobile version of your resume.  Use `500px` as a `max-width` for mobile.*/
+/*code starts here*/
+body {
+  margin: auto 400px;
+}
+@media (max-width: 500px) {
+  body {
+    margin: auto auto;
+  }
+}
+.flex {
+  display: flex;
+}
+.block {
+  display: block;
+}
+.table-spacing {
+  padding: 8px 50px;
+}
+@media (max-width: 500px) {
+  .table-spacing {
+    padding: 8px 35px;
+  }
+}
+h1 {
+  margin-top: 15px;
+  font-size: 2rem;
+}
+h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  margin: auto 3px;
+}
+.introduction {
+  background: #dfdfdf;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+@media (max-width: 500px) {
+  .introduction {
+    text-align: center;
+  }
+}
+.introduction p {
+  margin-left: 5px;
+}
+.introduction button {
+  background: #394939;
+  color: white;
+  margin: 8px auto auto 5px;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .introduction button {
+    margin: 10 auto auto 120px;
+  }
+}
+.listen-up-section {
+  display: flex;
+}
+.listen-up-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+}
+@media (max-width: 500px) {
+  .listen-up-section {
+    display: block;
+    text-align: center;
+  }
+}
+.listen-up-section .listen-up {
+  flex-basis: 50%;
+}
+.stuff-im-good-at {
+  margin-left: 20px;
+  flex-basis: 50%;
+}
+@media (max-width: 500px) {
+  .stuff-im-good-at {
+    margin-left: 0;
+  }
+}
+.stuff-im-good-at p {
+  border: 1px solid #dfdfdf;
+  padding: 5px;
+}
+@media (max-width: 500px) {
+  .work-history {
+    text-align: center;
+  }
+}
+.work-history table {
+  border-spacing: 5px;
+  border-collapse: collapse;
+}
+.work-history tr {
+  background-color: #dfdfdf;
+}
+.work-history tr:nth-of-type(2n) {
+  background-color: white;
+}
+.work-history td {
+  padding: 8px 50px;
+}
+@media (max-width: 500px) {
+  .work-history td {
+    padding: 8px 35px;
+  }
+}
+footer {
+  text-align: center;
+  background-color: #394939;
+  color: white;
+  border: 1px solid black;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+footer p {
+  margin-top: 15px;
+}
